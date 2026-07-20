@@ -10,7 +10,7 @@
 
 <img src="assets/banner.png" alt="InsightFlow Banner — Data in, Insight out" width="100%" />
 
-<br />
+<br /> 
 
 [![License](https://img.shields.io/badge/license-Apache%202.0-2E7D32?style=for-the-badge)](LICENSE)
 [![Build](https://img.shields.io/github/actions/workflow/status/insightflow-ai/insightflow/ci.yml?style=for-the-badge&label=build)](https://github.com/insightflow-ai/insightflow/actions)
