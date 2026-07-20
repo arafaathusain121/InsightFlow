@@ -1,5 +1,6 @@
 import json
 import logging
+import os
 from pathlib import Path
 from typing import Any, Dict
 
@@ -11,7 +12,8 @@ logger = logging.getLogger(__name__)
 class ReportAgent:
     def __init__(self, gemini_client: GeminiClient):
         self.gemini_client = gemini_client
-        self.prompt_dir = Path("prompts/system")
+        _base_dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+        self.prompt_dir = Path(_base_dir) / "prompts" / "system"
 
     def _load_system_prompt(self) -> str:
         prompt_path = self.prompt_dir / "report.txt"

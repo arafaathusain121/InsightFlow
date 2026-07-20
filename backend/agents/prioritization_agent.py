@@ -16,7 +16,8 @@ class PrioritizationAgent:
 
     def _load_system_prompt(self) -> str:
         import os
-        prompt_path = os.path.join(self.prompt_dir, "priority.txt")
+        base_dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+        prompt_path = os.path.join(base_dir, "prompts", "system", "priority.txt")
         if not os.path.exists(prompt_path):
             logger.error(f"System prompt not found at {prompt_path}")
             raise FileNotFoundError(f"System prompt not found: {prompt_path}")
